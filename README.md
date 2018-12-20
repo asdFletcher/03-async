@@ -15,101 +15,81 @@
 --- 
 
 ---
-
----
-
-[//]: # (heroku link: https://lab02-401.herokuapp.com/)
+Description:
+This project involves using 3 different types of asyncronous JavaScript functionalities to read data from local files. All the modules perform similar tasks (reading local files), but each has different functionality, implementation and tests.
 
 ---
 ### Modules
-#### `list-constructor.js`s
-#### `vehicle-class.js`
-#### `vehicle-constructor.js`
-#### `vehicle-factory.js`
-#### `flying-vehicle-class.js`
-#### `flying-vehicle-constructor.js`
-#### `flying-vehicle-factory.js`
+#### `reader-fixed.js`
+#### `reader-callbacks-array.js`
+#### `reader.js` (Deprecated, do not use, does not work)
 ---
 ##### Exported Values and Methods for the following modules:
-- #### `vehicle-class.js`
-- #### `vehicle-constructor.js`
-- #### `vehicle-factory.js`
 
+#### `reader-fixed.js`
+#### `reader-callbacks-array.js`
 
-* Vehicle
-    * Methods:
-        * `constructor(name, wheels)`
-        * `drive()`
-        * `stop()`
-    * Attributes:
-        * `name`
-        * `wheels`
-
-The following objects extend the Vehicle object:
-* Car
-    * Methods:
-        * constructor(name)
-        * `drive()`
-        * `stop()`
-    * Attributes:
-        * `name`
-        * `wheels: 4`
-
-* Motorcycle
-    * Methods:
-        * `constructor(name)`
-        * `drive()`
-        * `stop()`
-        * `wheelie()`
-    * Attributes:
-        * `name`
-        * `wheels: 2`
+* Methods:
+    * `anonymous function definition`
+* Attributes:
+    * none
 
 ---
 
 
 ##### Using the following modules:
-- #### `vehicle-class.js`
-- #### `vehicle-constructor.js`
-- #### `vehicle-factory.js`
+The modules:
+
+- #### `reader-fixed.js`
+- #### `reader-callbacks-array.js`
+
+export an anonymous function that reads local files.
+
+This function behaves as follows:
+* `(files, callback) => ... `
+    * Takes an array of file paths to be read, and a callback function that executes when the files are read.
+    * Returns an array of the contents of each file, in the order that it was specified in the `files` array.
+    * Implemented using `fs.readFile`
+    * Calls to read files are sent synchronously to preserve output array order
 
 
-Car Methods:
-* `constructor(name)`
-    * Takes a name and creates a Car object with that name
-    * Requires tha a name be passed in
-    * Automatically sets `wheels: 4`
-* `drive()`
-    * call the drive method to move the car
-    * accepts no arguments
-* `stop()`
-    * call the drive method to stop the car
-    * accepts no arguments
-
-
-Motorcycle:
-Identical to the Car object except that it has a `wheelie` method
-* `constructor(name)`
-    * Takes a name and creates a Car object with that name
-    * Requires tha a name be passed in
-    * Automatically sets `wheels: 4`
-* `drive()`
-    * call this method to move the car
-    * accepts no arguments
-* `stop()`
-    * call this method to stop the car
-    * accepts no arguments
-* `wheelie()`
-    * call this method to do a wheelie
-    * accepts no arguments
 
 ---
 
 ### Testing
 
-TODO: fill out testing instructions
-TODO: fill out testing methodology
+Test files for each module are located in the repository as follows:
+* `reader-callbacks-array.js`: `__tests__/lib/reader-callbacks-array.test.js`
+* `reader-fixed.js`: `__tests__/lib/reader.test.js`
+
+
+To perform testing using jest, run the following command in the terminal from the root of a local copy of the repository:
+```JavaScript
+npm jest --verbose --coverage
+```
+
+It is useful to bind this command to:
+```JavaScript
+npm test
+```
+
+An example of the `package.json` contents that create this bind is as follows:
+```Javascript
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "test-watch": "jest --watchAll --verbose --coverage"
+  }
+```
+
+To create a `package.json` file run:
+```JavaScript
+npm init
+```
+
+
 
 ---
 
-### 
+### Dependencies
+
+* TODO: list project setup instructions
