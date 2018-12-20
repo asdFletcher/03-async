@@ -7,11 +7,16 @@
 
 ### Links and Resources
 
-[![Build Status](https://www.travis-ci.com/asdFletcher/02-classes-inheritance-fp.svg?branch=master)](https://www.travis-ci.com/asdFletcher/02-classes-inheritance-fp)
+[![Build Status](https://www.travis-ci.com/asdFletcher/03-async.svg?branch=master)](https://www.travis-ci.com/asdFletcher/03-async)
 
 * [repo](https://github.com/asdFletcher/03-async)
-* [travis](https://www.travis-ci.com/asdFletcher/02-classes-inheritance-fp)
+* [travis](https://www.travis-ci.com/asdFletcher/03-async)
 
+--- 
+
+---
+
+---
 
 [//]: # (heroku link: https://lab02-401.herokuapp.com/)
 
