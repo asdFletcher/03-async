@@ -6,9 +6,10 @@
     "lib": "lib"
   },
   "scripts": {
-    "lint": "eslint **/.js",
-    "test": "jest --coverage --verbose",
-    "test-watch": "jest --watchAll --coverage --verbose"
+    "start": "node index.js",
+    "lint": "eslint **/*.js",
+    "test": "jest --verbose --coverage",
+    "test-watch": "jest --watchAll --verbose --coverage"
   },
   "author": "Fletcher LaRue",
   "license": "ISC",
