@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1546264403587" clover="3.2.0">
-  <project timestamp="1546264403587" name="All files">
-    <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7" elements="24" coveredelements="24" complexity="0" loc="17" ncloc="17" packages="1" files="1" classes="1">
-      <file name="reader-promises.js" path="/Users/fletcher/programming/codefellows/401/labs/03-async/lib/reader-promises.js">
-        <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+<coverage generated="1546266928057" clover="3.2.0">
+  <project timestamp="1546266928057" name="All files">
+    <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="6" coveredelements="6" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1">
+      <file name="reader-promise-all.js" path="/Users/fletcher/programming/codefellows/401/labs/03-async/lib/reader-promise-all.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="4" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
       </file>
     </metrics>
   </project>

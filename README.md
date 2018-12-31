@@ -74,7 +74,7 @@ npm test
 ```
 
 An example of the `package.json` contents that create this bind is as follows:
-```Javascript
+```JavaScript
   "scripts": {
     "test": "jest --verbose --coverage",
     "test-watch": "jest --watchAll --verbose --coverage"
@@ -85,6 +85,33 @@ To create a `package.json` file run:
 ```JavaScript
 npm init
 ```
+
+1. asdf
+1. asdf
+1. qqq
+    1. asdf
+    1. asdf
+    - asdf
+        - asdf
+            - asdf
+                - asdf
+                    * asdf
+                        * asa
+
+
+
+1. _asdf_
+_asdfsdf_
+*asdfasdfasdf*
+*asdfasdf
+_asdfasfasdf
+@asdfasdf@
+#asdfasdf#
+$asfasdf$
+
+
+%adsfasdfasdf%
+^asdfasdfasfd^
 
 
 
