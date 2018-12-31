@@ -13,17 +13,16 @@ console.log({files});
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // vanilla 3x nested callback
-const fileReader = require('./lib/reader-fixed.js');
+// const fileReader = require('./lib/reader-fixed.js');
 
-if( ! (files instanceof Array && files.length) ) {
-  throw new Error('Invalid Args');
-}
+// if( ! (files instanceof Array && files.length) ) {
+//   throw new Error('Invalid Args');
+// }
 
-fileReader(files, (err,data) => {
-  if ( err ) { throw new Error(err); }
-  console.log('From Callback:', data);
-});
-
+// fileReader(files, (err,data) => {
+//   if ( err ) { throw new Error(err); }
+//   console.log('From Callback:', data);
+// });
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -40,12 +39,6 @@ fileReader(files, (err,data) => {
 //   console.log('From Callback:', data);
 // });
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-
-
-
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -76,7 +69,20 @@ fileReader(files, (err,data) => {
 // });
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// test 3x promises
+const fileReader = require('./lib/reader-promises.js');
+if( ! (files instanceof Array && files.length) ) {
+  throw new Error('Invalid Args');
+}
 
+fileReader(files)
+  .then( (data)=>{
+    console.log({data});
+  })
+  .catch( (err) => {throw new Error(err);});
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 

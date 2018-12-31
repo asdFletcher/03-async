@@ -4,7 +4,7 @@ module.exports = exports = {};
 
 exports.readFile = (file, cb) => {
   if( file.match(/bad/i) ) {
-    cb('Invalid File');
+    throw new Error('error');
   }
   else {
     cb(undefined, new Buffer(file));
