@@ -20,7 +20,7 @@ console.log({files});
 // }
 
 // fileReader(files, (err,data) => {
-//   if ( err ) { throw err; }
+//   if ( err ) { throw new Error(err); }
 //   console.log('From Callback:', data);
 // });
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -28,23 +28,17 @@ console.log({files});
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // n callbacks
-const fileReader = require('./lib/reader-callbacks-array.js');
+// const fileReader = require('./lib/reader-callbacks-array.js');
 
-if( ! (files instanceof Array && files.length) ) {
-  throw new Error('Invalid Args');
-}
+// if( ! (files instanceof Array && files.length) ) {
+//   throw new Error('Invalid Args');
+// }
 
-fileReader(files, (err,data) => {
-  if ( err ) { throw err; }
-  console.log('From Callback:', data);
-});
+// fileReader(files, (err,data) => {
+//   if ( err ) { throw err; }
+//   console.log('From Callback:', data);
+// });
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-
-
-
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -75,10 +69,40 @@ fileReader(files, (err,data) => {
 // });
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// test 3x promises
+// const fileReader = require('./lib/reader-promises.js');
+// if( ! (files instanceof Array && files.length) ) {
+//   throw new Error('Invalid Args');
+// }
+
+// fileReader(files)
+//   .then( (data)=>{
+//     console.log({data});
+//   })
+//   .catch( (err) => {throw new Error(err);});
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// test promise.all
 
+const fileReader = require('./lib/reader-promise-all.js');
+if( ! (files instanceof Array && files.length) ) {
+  throw new Error('Invalid Args');
+}
 
+fileReader(files)
+  .then( (data)=>{
+    console.log({data});
+  })
+  .catch( (err) => {
+    console.log(err);
+    throw (err);
+  });
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
